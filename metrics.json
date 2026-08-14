@@ -1,0 +1,414 @@
+{
+  "mortality": {
+    "triage": {
+      "feature_set": "triage",
+      "n_train": 40055,
+      "n_val": 7125,
+      "n_test": 11796,
+      "prevalence": 0.0992,
+      "auroc": 0.7885,
+      "auprc": 0.2881,
+      "auprc_baseline": 0.0992,
+      "brier": 0.0796,
+      "brier_baseline_prevalence": 0.0893,
+      "risk_tiers": [
+        {
+          "tier": "Low",
+          "n": 4585,
+          "observed_mortality": 0.0177
+        },
+        {
+          "tier": "Medium",
+          "n": 5353,
+          "observed_mortality": 0.1054
+        },
+        {
+          "tier": "High",
+          "n": 1858,
+          "observed_mortality": 0.2826
+        }
+      ],
+      "operating_point": {
+        "threshold": 0.0886,
+        "tn_fp_fn_tp": [
+          6437,
+          4189,
+          204,
+          966
+        ],
+        "recall": 0.826,
+        "precision": 0.187,
+        "specificity": 0.606
+      },
+      "calibration_curve": {
+        "mean_predicted": [
+          0.0017,
+          0.0132,
+          0.0245,
+          0.0413,
+          0.0635,
+          0.0844,
+          0.1144,
+          0.153,
+          0.2084,
+          0.3295
+        ],
+        "observed_freq": [
+          0.0049,
+          0.0102,
+          0.021,
+          0.0413,
+          0.054,
+          0.0831,
+          0.112,
+          0.1387,
+          0.2231,
+          0.3073
+        ]
+      },
+      "top_features": [
+        {
+          "feature": "age",
+          "importance": 0.1076
+        },
+        {
+          "feature": "adm_diagnosis",
+          "importance": 0.0948
+        },
+        {
+          "feature": "admission_type",
+          "importance": 0.0309
+        },
+        {
+          "feature": "language",
+          "importance": 0.0292
+        },
+        {
+          "feature": "marital_status",
+          "importance": 0.0128
+        },
+        {
+          "feature": "religion",
+          "importance": 0.0065
+        },
+        {
+          "feature": "ed_los_hours",
+          "importance": 0.0029
+        },
+        {
+          "feature": "admission_location",
+          "importance": 0.0026
+        },
+        {
+          "feature": "ethnicity",
+          "importance": 0.0022
+        },
+        {
+          "feature": "insurance",
+          "importance": 0.0004
+        },
+        {
+          "feature": "icd9_str",
+          "importance": 0.0
+        },
+        {
+          "feature": "first_careunit",
+          "importance": 0.0
+        }
+      ]
+    },
+    "full": {
+      "feature_set": "full",
+      "n_train": 40055,
+      "n_val": 7125,
+      "n_test": 11796,
+      "prevalence": 0.0992,
+      "auroc": 0.9232,
+      "auprc": 0.6444,
+      "auprc_baseline": 0.0992,
+      "brier": 0.054,
+      "brier_baseline_prevalence": 0.0893,
+      "risk_tiers": [
+        {
+          "tier": "Low",
+          "n": 7695,
+          "observed_mortality": 0.0113
+        },
+        {
+          "tier": "Medium",
+          "n": 2219,
+          "observed_mortality": 0.0892
+        },
+        {
+          "tier": "High",
+          "n": 1882,
+          "observed_mortality": 0.4702
+        }
+      ],
+      "operating_point": {
+        "threshold": 0.1495,
+        "tn_fp_fn_tp": [
+          9274,
+          1352,
+          214,
+          956
+        ],
+        "recall": 0.817,
+        "precision": 0.414,
+        "specificity": 0.873
+      },
+      "calibration_curve": {
+        "mean_predicted": [
+          0.0,
+          0.0008,
+          0.0029,
+          0.007,
+          0.0137,
+          0.0262,
+          0.0512,
+          0.1,
+          0.2261,
+          0.5763
+        ],
+        "observed_freq": [
+          0.0006,
+          0.0014,
+          0.0026,
+          0.008,
+          0.0181,
+          0.0264,
+          0.0335,
+          0.088,
+          0.2189,
+          0.5986
+        ]
+      },
+      "top_features": [
+        {
+          "feature": "icd9_str",
+          "importance": 0.2888
+        },
+        {
+          "feature": "age",
+          "importance": 0.018
+        },
+        {
+          "feature": "language",
+          "importance": 0.0117
+        },
+        {
+          "feature": "adm_diagnosis",
+          "importance": 0.005
+        },
+        {
+          "feature": "n_diagnoses",
+          "importance": 0.0033
+        },
+        {
+          "feature": "marital_status",
+          "importance": 0.0032
+        },
+        {
+          "feature": "admission_type",
+          "importance": 0.0026
+        },
+        {
+          "feature": "religion",
+          "importance": 0.001
+        },
+        {
+          "feature": "ed_los_hours",
+          "importance": 0.001
+        },
+        {
+          "feature": "admission_location",
+          "importance": 0.0006
+        },
+        {
+          "feature": "first_careunit",
+          "importance": 0.0005
+        },
+        {
+          "feature": "ethnicity",
+          "importance": 0.0004
+        }
+      ]
+    }
+  },
+  "icu_los": {
+    "triage": {
+      "feature_set": "triage",
+      "n_train": 46231,
+      "n_test": 11545,
+      "mae_days": 3.702,
+      "median_ae_days": 1.365,
+      "rmse_days": 9.626,
+      "r2": 0.0641,
+      "mae_baseline_median": 3.888,
+      "mae_by_bucket": [
+        {
+          "b": "0-2d",
+          "n": 5577,
+          "mae": 1.479
+        },
+        {
+          "b": "2-5d",
+          "n": 3364,
+          "mae": 0.905
+        },
+        {
+          "b": "5-10d",
+          "n": 1329,
+          "mae": 4.015
+        },
+        {
+          "b": "10d+",
+          "n": 1275,
+          "mae": 20.477
+        }
+      ],
+      "within_0_10d": {
+        "n": 10270,
+        "mae_days": 1.619,
+        "r2": -0.1388
+      },
+      "top_features": [
+        {
+          "feature": "age",
+          "importance": 0.641
+        },
+        {
+          "feature": "admission_location",
+          "importance": 0.3237
+        },
+        {
+          "feature": "adm_diagnosis",
+          "importance": 0.1332
+        },
+        {
+          "feature": "language",
+          "importance": 0.0398
+        },
+        {
+          "feature": "ed_los_hours",
+          "importance": 0.0291
+        },
+        {
+          "feature": "insurance",
+          "importance": 0.0077
+        },
+        {
+          "feature": "ethnicity",
+          "importance": 0.0068
+        },
+        {
+          "feature": "admission_type",
+          "importance": 0.0023
+        },
+        {
+          "feature": "religion",
+          "importance": 0.0012
+        },
+        {
+          "feature": "gender",
+          "importance": 0.0002
+        },
+        {
+          "feature": "came_via_ed",
+          "importance": 0.0001
+        },
+        {
+          "feature": "icd9_str",
+          "importance": 0.0
+        }
+      ]
+    },
+    "full": {
+      "feature_set": "full",
+      "n_train": 46231,
+      "n_test": 11545,
+      "mae_days": 2.653,
+      "median_ae_days": 0.989,
+      "rmse_days": 6.256,
+      "r2": 0.6047,
+      "mae_baseline_median": 3.888,
+      "mae_by_bucket": [
+        {
+          "b": "0-2d",
+          "n": 5577,
+          "mae": 0.945
+        },
+        {
+          "b": "2-5d",
+          "n": 3364,
+          "mae": 1.279
+        },
+        {
+          "b": "5-10d",
+          "n": 1329,
+          "mae": 3.379
+        },
+        {
+          "b": "10d+",
+          "n": 1275,
+          "mae": 12.988
+        }
+      ],
+      "within_0_10d": {
+        "n": 10270,
+        "mae_days": 1.369,
+        "r2": -0.1257
+      },
+      "top_features": [
+        {
+          "feature": "icd9_str",
+          "importance": 1.9092
+        },
+        {
+          "feature": "n_diagnoses",
+          "importance": 0.7226
+        },
+        {
+          "feature": "age",
+          "importance": 0.1513
+        },
+        {
+          "feature": "first_careunit",
+          "importance": 0.0609
+        },
+        {
+          "feature": "adm_diagnosis",
+          "importance": 0.0585
+        },
+        {
+          "feature": "language",
+          "importance": 0.0333
+        },
+        {
+          "feature": "ed_los_hours",
+          "importance": 0.0147
+        },
+        {
+          "feature": "admission_location",
+          "importance": 0.0067
+        },
+        {
+          "feature": "insurance",
+          "importance": 0.0046
+        },
+        {
+          "feature": "religion",
+          "importance": 0.0013
+        },
+        {
+          "feature": "ethnicity",
+          "importance": 0.0004
+        },
+        {
+          "feature": "gender",
+          "importance": 0.0004
+        }
+      ]
+    }
+  }
+}
