@@ -1,0 +1,341 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.panel {
+  background-color: #fff;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 16px;
+  padding: 2rem 2.25rem 2.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.patientName {
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem;
+}
+
+.headerMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.metaTag {
+  display: inline-block;
+  background-color: #e8f5f2;
+  color: #2c4a63;
+  border-radius: 6px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.closeBtn {
+  background: #f0f4f4;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #555;
+}
+
+.closeBtn:hover {
+  background: #e0eaea;
+}
+
+/* Admission date shown once under ID badges */
+.admissionDateRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #eef6f4;
+  border: 1px solid #c0ddd7;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.admissionDateLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5bb39c;
+}
+
+.admissionDateValue {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5bb39c;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid #e0f0ee;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.25rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.infoLabel {
+  font-size: 0.78rem;
+  color: #7a8e8e;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.infoValue {
+  font-size: 0.97rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.diagTag {
+  display: inline-block;
+  background-color: #e8f5f2;
+  color: #2c4a63;
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.88rem;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  font-weight: 500;
+}
+
+.diagCount {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #5bb39c;
+  font-weight: 700;
+}
+
+.runPredBtn {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #5bb39c 0%, #3a8f78 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+  transition: opacity 0.2s;
+}
+
+.runPredBtn:hover { opacity: 0.9; }
+.runPredBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.predictionBox {
+  background: linear-gradient(135deg, #f0faf8 0%, #e6f4f1 100%);
+  border: 1.5px solid #5bb39c;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.predTitle {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a4a3a;
+  margin: 0 0 1rem;
+}
+
+.predGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.predItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.predLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5bb39c;
+}
+
+.predValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.predNote {
+  font-size: 0.92rem;
+  color: #2c4a63;
+  background-color: #fff;
+  border-left: 4px solid #5bb39c;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5;
+}
+
+.riskBadge {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 0.15rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.riskLow { background-color: #d4edda; color: #155724; }
+.riskMedium { background-color: #fff3cd; color: #856404; }
+.riskHigh { background-color: #f8d7da; color: #721c24; }
+
+.predError {
+  background-color: #f8d7da;
+  border: 1.5px solid #f5c6cb;
+  border-radius: 10px;
+  color: #721c24;
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Previous Admissions */
+.prevBtn {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 0.97rem;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  color: #2c4a63;
+  background-color: #eef6f4;
+  border: 1.5px solid #8fc7b8;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.18s;
+}
+
+.prevBtn:hover { background-color: #ddf0ea; }
+.prevBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.prevList {
+  margin-top: 0.75rem;
+  border: 1.5px solid #e0f0ee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.prevItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f8f6;
+  transition: background-color 0.15s;
+  gap: 0.5rem;
+}
+
+.prevItem:last-child { border-bottom: none; }
+.prevItem:hover { background-color: #f0faf8; }
+
+.prevAdmId {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #5bb39c;
+  font-family: monospace;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.currentBadge {
+  display: inline-block;
+  background-color: #5bb39c;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.35rem;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+}
+
+.prevDate {
+  font-size: 0.85rem;
+  color: #7a8e8e;
+}
+
+.prevEmpty {
+  padding: 1rem;
+  text-align: center;
+  color: #7a8e8e;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 580px) {
+  .infoGrid, .predGrid { grid-template-columns: 1fr; }
+  .panel { padding: 1.25rem 1rem 2rem; }
+  .headerMeta { flex-direction: column; }
+}
