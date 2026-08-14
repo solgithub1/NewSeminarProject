@@ -1,7 +1,6 @@
 import type { Admission } from './admission.js';
 
-/** Base URL of the running prediction API. Update when Cloudflare URL changes. */
-const API_URL = 'https://told-sparc-regional-horizontal.trycloudflare.com';
+const API_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000').replace(/\/$/, '');
 
 export type PredictionResult = {
   /** Predicted ICU length of stay in days. */

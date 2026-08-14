@@ -193,7 +193,8 @@ export function AskAiPage() {
     setResponse({ status: 'loading' });
 
     try {
-      const res = await fetch('/api/ask-ai', {
+      const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000').replace(/\/$/, '');
+      const res = await fetch(`${apiBaseUrl}/api/ask-ai`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
